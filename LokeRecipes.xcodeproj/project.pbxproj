@@ -6,6 +6,13 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		347F01472D0A2EA5001BD054 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F01462D0A2EA5001BD054 /* ContentView.swift */; };
+		347F017E2D0A3154001BD054 /* RecipeRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 347F017D2D0A314D001BD054 /* RecipeRowView.swift */; };
+		347F01812D0A3383001BD054 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 347F01802D0A3383001BD054 /* FirebaseAnalytics */; };
+		347F01832D0A33A1001BD054 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = 347F01822D0A33A1001BD054 /* FirebaseAnalyticsWithoutAdIdSupport */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		347F01522D0A2EA7001BD054 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -25,8 +32,13 @@
 
 /* Begin PBXFileReference section */
 		347F01412D0A2EA5001BD054 /* LokeRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LokeRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		347F01462D0A2EA5001BD054 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		347F01512D0A2EA6001BD054 /* LokeRecipesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LokeRecipesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		347F015B2D0A2EA7001BD054 /* LokeRecipesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LokeRecipesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		347F01742D0A306C001BD054 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		347F01752D0A307B001BD054 /* RecipeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewModel.swift; sourceTree = "<group>"; };
+		347F017A2D0A30E2001BD054 /* DateExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensions.swift; sourceTree = "<group>"; };
+		347F017D2D0A314D001BD054 /* RecipeRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				347F01812D0A3383001BD054 /* FirebaseAnalytics in Frameworks */,
+				347F01832D0A33A1001BD054 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,10 +89,16 @@
 		347F01382D0A2EA5001BD054 = {
 			isa = PBXGroup;
 			children = (
+				347F01792D0A30C6001BD054 /* Utilities */,
+				347F01732D0A3004001BD054 /* Services */,
+				347F01712D0A2FF4001BD054 /* Views */,
+				347F016F2D0A2FE0001BD054 /* ViewModels */,
+				347F016E2D0A2FD9001BD054 /* Models */,
 				347F01432D0A2EA5001BD054 /* LokeRecipes */,
 				347F01542D0A2EA7001BD054 /* LokeRecipesTests */,
 				347F015E2D0A2EA7001BD054 /* LokeRecipesUITests */,
 				347F01422D0A2EA5001BD054 /* Products */,
+				347F01762D0A30AE001BD054 /* Authentication */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +110,53 @@
 				347F015B2D0A2EA7001BD054 /* LokeRecipesUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		347F016E2D0A2FD9001BD054 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				347F01742D0A306C001BD054 /* Recipe.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		347F016F2D0A2FE0001BD054 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				347F01752D0A307B001BD054 /* RecipeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		347F01712D0A2FF4001BD054 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				347F017D2D0A314D001BD054 /* RecipeRowView.swift */,
+				347F01462D0A2EA5001BD054 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		347F01732D0A3004001BD054 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		347F01762D0A30AE001BD054 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		347F01792D0A30C6001BD054 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				347F017A2D0A30E2001BD054 /* DateExtensions.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +179,8 @@
 			);
 			name = LokeRecipes;
 			packageProductDependencies = (
+				347F01802D0A3383001BD054 /* FirebaseAnalytics */,
+				347F01822D0A33A1001BD054 /* FirebaseAnalyticsWithoutAdIdSupport */,
 			);
 			productName = LokeRecipes;
 			productReference = 347F01412D0A2EA5001BD054 /* LokeRecipes.app */;
@@ -195,6 +264,9 @@
 			);
 			mainGroup = 347F01382D0A2EA5001BD054;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				347F017F2D0A3383001BD054 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 347F01422D0A2EA5001BD054 /* Products */;
 			projectDirPath = "";
@@ -236,6 +308,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				347F017E2D0A3154001BD054 /* RecipeRowView.swift in Sources */,
+				347F01472D0A2EA5001BD054 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +626,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		347F017F2D0A3383001BD054 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.6.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		347F01802D0A3383001BD054 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 347F017F2D0A3383001BD054 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		347F01822D0A33A1001BD054 /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 347F017F2D0A3383001BD054 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 347F01392D0A2EA5001BD054 /* Project object */;
 }
